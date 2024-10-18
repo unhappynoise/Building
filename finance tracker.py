@@ -31,8 +31,7 @@ class Finance:
                 print(f"{idx}. {expense['description']} - ${expense['amount']}")
 
     def cal_balance(self):
-        total_expenses = sum(expense['amount'] for expense in self.expenses)
-        self.balance = self.income - total_expenses
+        self.balance = self.income -  sum(expense['amount'] for expense in self.expenses)
 
         print(f"Your balance is ${self.balance}")
 
