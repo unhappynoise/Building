@@ -29,7 +29,7 @@ class TaskManager:
         task = Task(name)
         self.tasks.append(task)
         self.save_tasks()
-        is_completed = input(f"Is the task '{name}' completed? (yes/no): ").strip().lower()
+        is_completed = input(f"Is the task '{name}' completed? (yes or no): ").strip().lower()
         if is_completed == 'yes':
             task.mark_completed()
             print(f"Task '{name}' marked as completed.")
